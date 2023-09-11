@@ -4,7 +4,7 @@ import DataAreaChart from "./DataAreaChart"
 function DataVisualization({data}){
     console.log('DV', data)
     return (
-        <div>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <DataLineChart data={data}/>
             <DataAreaChart data={data} />
         </div>
