@@ -4,7 +4,8 @@ function DataAreaChart({ data}) {
     console.log('areachart!', data);
 
     return (
-     
+        <div>
+        <h3>Cumulative Expenditure</h3>
         <AreaChart
           width={500}
           height={400}
@@ -22,7 +23,7 @@ function DataAreaChart({ data}) {
           <Tooltip />
           <Area type="monotone" dataKey="numTrees" stroke="#8884d8" fill="#8884d8" />
         </AreaChart>
-    
+        </div>
     );
   }
 export default DataAreaChart;

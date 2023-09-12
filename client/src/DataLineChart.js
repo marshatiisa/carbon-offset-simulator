@@ -3,6 +3,8 @@ import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,} from "re
 function DataLineChart({ data }) {
   console.log('DL', data);
   return (
+    <div>
+    <h3>Carbon Offsets</h3>
     <LineChart
       width={600}
       height={400}
@@ -21,6 +23,7 @@ function DataLineChart({ data }) {
         activeDot={{ r: 8 }}
       />
     </LineChart>
+    </div>
   );
 }
 

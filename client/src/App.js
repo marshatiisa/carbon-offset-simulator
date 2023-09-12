@@ -17,6 +17,7 @@ function App () {
   
     return (
       <div>
+        <h1> Carbon Offset Simulation Tool</h1>
         <DataSelection data={carbonOffsetData} />
         <DataVisualization data={carbonOffsetData} />
 

@@ -1,5 +1,6 @@
 import BootstrapTable from 'react-bootstrap-table-next';
 import DataSelectionForm from './DataSelectionForm';
+import DataSummary from './DataSummary';
 
 const columns = [
     {
@@ -31,6 +32,7 @@ function DataSelection({data}){
             data={data}
             columns={columns}
             />
+            <DataSummary />
         </div>
     )
 }
