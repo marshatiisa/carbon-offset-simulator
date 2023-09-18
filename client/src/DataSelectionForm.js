@@ -11,12 +11,19 @@ const countryOptions = [
   { label: "Australia", value: "AU" },
 ];
 
+const simulationModes = [
+    { label: "Monthly", value: "monthly"},
+    { label: "Yearly", value: "yearly"}
+]
+
 const DataSelectionForm = () => {
   const {handleSubmit, control } = useForm();
   const onSubmit = (data) => {console.log(data)};
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+    <div>
+    <label htmlFor="country">Country</label>
       <Controller
         name="country"
         control={control}
@@ -31,6 +38,24 @@ const DataSelectionForm = () => {
           </select>
         )}
       />
+    </div>
+    <div>
+        <label htmlFor="simulationMode">Simulation Mode</label>
+        <Controller
+          name="simulationMode"
+          control={control}
+          defaultValue="monthly"
+          render={({ field }) => (
+            <select {...field}>
+              {simulationModes.map((mode, index) => (
+                <option key={index} value={mode.value}>
+                  {mode.label}
+                </option>
+              ))}
+            </select>
+          )}
+        />
+      </div>
       <button type="submit">Submit</button>
     </form>
   );
