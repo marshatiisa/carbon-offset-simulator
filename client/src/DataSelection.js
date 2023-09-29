@@ -4,8 +4,13 @@ import DataSummary from './DataSummary';
 
 const columns = [
     {
+        dataField: 'index',
+        text: '#',         
+        formatter: (cell, row, rowIndex) => rowIndex + 1,
+      },
+    {
       dataField: 'month',
-      text: 'Month',
+      text: 'Month'
     },
  
     {
@@ -29,7 +34,7 @@ function DataSelection({data}){
             <h3>Purchases</h3>
            <BootstrapTable
             keyField="month"
-            data={data}
+            data={data.map((item, index) => ({ ...item, index: index + 1 }))}
             columns={columns}
             />
             <DataSummary />
