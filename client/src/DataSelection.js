@@ -1,6 +1,8 @@
 import BootstrapTable from 'react-bootstrap-table-next';
 import DataSelectionForm from './DataSelectionForm';
 import DataSummary from './DataSummary';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const columns = [
     {
@@ -17,17 +19,26 @@ const columns = [
       dataField: 'numTrees',
       text: 'Number of Trees',
     },
+    {
+        text: ''
+      }
   ];
 
-function DataSelection({data}){
+function DataSelection({data, setCarbonOffsetData}){
     const dataLis= data.map((d, i)=> 
     <li>
         <span>{i}</span>
         <span>{d.month}</span>
         <span>{d.numTrees}</span>
-        <span>delete</span>
+        <span><FontAwesomeIcon icon={faTrash} /> Delete</span>
     </li>
     )
+
+    const handleDelete = (row) => {
+        const newData = data.filter((item) => item.month !== row.month)
+        setCarbonOffsetData(newData)
+      };
+
     return (
         <div>
             <DataSelectionForm />

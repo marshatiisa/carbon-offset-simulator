@@ -22,7 +22,7 @@ const DataSelectionForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-    <div>
+    <div style={{ marginBottom: '20px' }}>
     <label htmlFor="country">Country</label>
       <Controller
         name="country"
@@ -39,7 +39,7 @@ const DataSelectionForm = () => {
         )}
       />
     </div>
-    <div>
+    <div style={{ marginBottom: '20px' }}>
         <label htmlFor="simulationMode">Simulation Mode</label>
         <Controller
           name="simulationMode"
