@@ -1,32 +1,27 @@
-import React from 'react';
-import SimulationPage from './Simulator';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import {useEffect, useState} from 'react';
+import DataVisualization from './DataVisualization';
+import DataSelection from './DataSelection';
 
+function App () {
+  const [carbonOffsetData, setCarbonOffsetData] = useState([])
 
-class App extends React.Component {
-  // state = {
-  //   name: ""
-  // }
-
-  // componentDidMount() {
-  //   fetch("http://localhost:3000")
-  //     .then(res => res.json())
-  //     .then(data => this.setState({ name: data.name }))
-  // }
-
-  render() {
+  useEffect(()=> {
+    async function fetchData(){
+      const dataResponse = await fetch("http://localhost:3001/carbonoffsetdata")
+      const data = await dataResponse.json()
+      console.log(data)
+      setCarbonOffsetData(data)
+    }
+    fetchData()
+  }, [])
+  
     return (
-      <Router>
-        {/* <Link to='/login'>Simulation</Link>
-        <Link to='/signup'>Simulation</Link> */}
-        <Link to='/simulation'>Simulation</Link>
-        <Routes>
-          <Route exact path='/' component={SimulationPage} />
-        </Routes>
-      </Router>
+      <div>
+        <DataSelection data={carbonOffsetData} />
+        <DataVisualization data={carbonOffsetData} />
+
+      </div>
     )
-  }
 }
 
 export default App;
