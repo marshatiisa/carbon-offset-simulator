@@ -7,7 +7,7 @@ function App () {
 
   useEffect(()=> {
     async function fetchData(){
-      const dataResponse = await fetch("http://localhost:3001/carbonoffsetdata")
+      const dataResponse = await fetch("http://localhost:3001/purchases")
       const data = await dataResponse.json()
       console.log(data)
       setCarbonOffsetData(data)
@@ -16,7 +16,7 @@ function App () {
   }, [])
   
     return (
-      <div >
+      <div style={{ margin: '20px' }}>
         <h1 style={{ textAlign: 'center' }}> Carbon Offset Simulation Tool</h1>
         <DataSelection data={carbonOffsetData} />
         <DataVisualization data={carbonOffsetData} />
