@@ -34,10 +34,10 @@ Before you begin, make sure you have Node.js and npm (Node Package Manager) inst
    # Install backend dependencies
    cd ../api
    npm install
-   ```
+   
    # Install Express.js for the backend
     npm install express
-
+    ```
 ### Frontend Dependencies
 
 The frontend of this project relies on several packages to work correctly. These include:
