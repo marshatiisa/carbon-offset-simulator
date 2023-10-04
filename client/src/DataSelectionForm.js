@@ -11,12 +11,17 @@ const countryOptions = [
   { label: "Australia", value: "AU" },
 ];
 
+const countryConsumption = {
+  country: "US", consumption: 15.52 * 1000,
+}
+
 const simulationModes = [
     { label: "Monthly", value: "monthly"},
     { label: "Yearly", value: "yearly"}
 ]
 
-const DataSelectionForm = () => {
+const DataSelectionForm = ({setCountry}) => {
+  const country = "US"
   const {handleSubmit, control } = useForm();
   const onSubmit = (data) => {console.log(data)};
 

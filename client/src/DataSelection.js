@@ -24,7 +24,7 @@ const columns = [
       }
   ];
 
-function DataSelection({data, setCarbonOffsetData}){
+function DataSelection({data, setPurchaseData}){
     const dataLis= data.map((d, i)=> 
     <li>
         <span>{i}</span>
@@ -36,7 +36,7 @@ function DataSelection({data, setCarbonOffsetData}){
 
     const handleDelete = (row) => {
         const newData = data.filter((item) => item.month !== row.month)
-        setCarbonOffsetData(newData)
+        setPurchaseData(newData)
       };
 
     return (
