@@ -34,9 +34,7 @@ Before you begin, make sure you have Node.js and npm (Node Package Manager) inst
    # Install backend dependencies
    cd ../api
    npm install
-   
-   # Install Express.js for the backend
-    npm install express
+   npm install express
     ```
 ### Frontend Dependencies
 
