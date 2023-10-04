@@ -4,7 +4,7 @@ The Carbon Offset Simulator is a web application that allows users to calculate 
 
 ## Getting Started
 
-To run the Carbon Offset Simulator, you'll need to set up both the frontend and backend. The frontend is built with React, while the backend is built with Express.js.
+To run the Carbon Offset Simulator, you'll need to set up both the frontend and backend. The frontend is built with React, while the backend is built with Node.js and Express.js.
 
 ### Prerequisites
 
@@ -38,13 +38,10 @@ Before you begin, make sure you have Node.js and npm (Node Package Manager) inst
     ```
 ### Frontend Dependencies
 
-The frontend of this project relies on several packages to work correctly. These include:
-
 - [react-hook-forms](https://www.npmjs.com/package/react-hook-forms): Used for handling form input on the front end.
 - [react-bootstrap-table2](https://www.npmjs.com/package/react-bootstrap-table2): Used for tabulating data.
 - [recharts](https://www.npmjs.com/package/recharts): Used for handling data visualization.
 
-You don't need to install these packages manually, as they are included in the project's `package.json` file. Running `npm install` in the `frontend` directory will install them for you.
 
 ## Running the Application
 
@@ -80,6 +77,6 @@ To start the Carbon Offset Simulator, follow these steps:
    npm start
    ```
 
-   The backend server will run on [http://localhost:5000](http://localhost:3001).
+   The backend server will run on [http://localhost:3001](http://localhost:3001).
 
 
