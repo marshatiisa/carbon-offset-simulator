@@ -52,7 +52,7 @@ function DataSelection({ data, setPurchaseData }) {
           data={data.map((item, index) => ({ ...item, index: index + 1 }))}
           columns={columns}
         />
-      <DataSummary />
+      <DataSummary data={data} /> {/* Pass data prop to DataSummary */}
     </div>
   );
 }
