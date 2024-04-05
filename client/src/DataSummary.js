@@ -59,3 +59,11 @@ function DataSummary({ data }) {
 }
 
 export default DataSummary;
+
+// Possible Enhancements
+
+// You could expand on these insights by calculating the total carbon emissions for a user (based on their inputs and your calculations in other areas of the app) and then comparing this value to the total offsets to give users a better sense of their overall footprint, and the impact of their offsetting. 
+
+// Consider incorporating data from the countryConsumption prop in the DataLineChart component. You could compare a user's offsets with their country's average and provide insights on how they compare. 
+
+// You can customize the summary further by adding more relevant statistics or visualizations, like progress towards a goal, or projected impacts based on maintaining current offsetting behaviors.
