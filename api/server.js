@@ -28,7 +28,20 @@ function addPurchaseDB(month, numTrees) {
   });
 }
 
-function deletePurchaseDB(month, numTrees) {}
+function deletePurchaseDB(month, numTrees) {
+  // // Find the index of the entry matching the month and numTrees
+  // const indexToDelete = fakeDB.findIndex(
+  //   (entry) => entry.month === monthToDelete && entry.numTrees === numTreesToDelete
+  // );
+
+  // if (indexToDelete !== -1) {
+  //   // Remove the element from the array
+  //   fakeDB.splice(indexToDelete, 1);
+  // } else {
+  //   // Handle the case where the specified entry is not found. You can customize this behavior. 
+  //   console.warn(`Entry with month: ${monthToDelete} and numTrees: ${numTreesToDelete} not found in the database.`);
+  // }
+}
 
 function getPurchasesDB() {
   return fakeDB.map((p) => {
