@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import DataVisualization from './DataVisualization';
 import DataSelection from './DataSelection';
+import Blog from './Blog';
 
 function App () {
   const [carbonOffsetData, setCarbonOffsetData] = useState([])
@@ -28,10 +29,11 @@ function App () {
   }, [])
   
     return (
-      <div style={{ margin: '20px' }}>
+      <div style={{ marginLeft: '10px auto' }}>
         <h1 style={{ textAlign: 'center' }}> Carbon Offset Simulation Tool</h1>
         <DataSelection country='US' data={purchaseData} />
       <DataVisualization country='US' countryConsumption={15.52/12*1000} carbonOffsetData={convertMonthlyToThirds(carbonOffsetData)} purchaseData={purchaseData} expenditureData={convertMonthlyToThirdsExpenditures(expenditureData)}/>
+      <Blog/>
       </div>
     )
 }
