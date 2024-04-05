@@ -66,6 +66,34 @@ const DataSelectionForm = ({setCountry}) => {
   );
 };
 
+// Inline styles
+const formStyles = {
+  marginBottom: '20px',
+};
 
+const formGroupStyles = {
+  marginBottom: '20px',
+};
+
+const labelStyles = {
+  marginRight: '10px',
+};
+
+const selectStyles = {
+  width: '200px',
+  padding: '5px',
+  borderRadius: '4px',
+  border: '1px solid #ccc',
+  marginRight: '10px',
+};
+
+const submitButtonStyles = {
+  padding: '8px 20px',
+  borderRadius: '4px',
+  backgroundColor: '#007bff',
+  color: '#fff',
+  border: 'none',
+  cursor: 'pointer',
+};
 
 export default DataSelectionForm;
