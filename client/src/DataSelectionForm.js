@@ -26,32 +26,32 @@ const DataSelectionForm = ({setCountry}) => {
   const onSubmit = (data) => {console.log(data)};
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-    <div style={{ marginBottom: '20px' }}>
-    <label htmlFor="country">Country</label>
-      <Controller
-        name="country"
-        control={control}
-        defaultValue="US" 
-        render={({ field }) => (
-          <select {...field}>
-            {countryOptions.map((option, index) => (
-              <option key={index} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        )}
-      />
-    </div>
-    <div style={{ marginBottom: '20px' }}>
-        <label htmlFor="simulationMode">Simulation Mode</label>
+    <form onSubmit={handleSubmit(onSubmit)} style={formStyles}>
+      <div style={formGroupStyles}>
+        <label htmlFor="country" style={labelStyles}>Country</label>
+        <Controller
+          name="country"
+          control={control}
+          defaultValue="US" 
+          render={({ field }) => (
+            <select {...field} style={selectStyles}>
+              {countryOptions.map((option, index) => (
+                <option key={index} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          )}
+        />
+      </div>
+      <div style={formGroupStyles}>
+        <label htmlFor="simulationMode" style={labelStyles}>Simulation Mode</label>
         <Controller
           name="simulationMode"
           control={control}
           defaultValue="monthly"
           render={({ field }) => (
-            <select {...field}>
+            <select {...field} style={selectStyles}>
               {simulationModes.map((mode, index) => (
                 <option key={index} value={mode.value}>
                   {mode.label}
@@ -61,7 +61,7 @@ const DataSelectionForm = ({setCountry}) => {
           )}
         />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" style={submitButtonStyles}>Submit</button>
     </form>
   );
 };

@@ -47,15 +47,48 @@ function DataSummary({ data }) {
   }, [data]);
 
   return (
-    <div>
-      <h3>Summary</h3>
-      <p>Total Carbon Offsets: {summaryStats.totalOffsets} tons</p>
-      <p>Total Expenditure on Offsets: ${summaryStats.totalExpenditure}</p>
-      <p>Average Monthly Offset: {summaryStats.averageMonthlyOffset.toFixed(2)} tons</p>
-      <p>Average Monthly Expenditure: ${summaryStats.averageMonthlyExpenditure.toFixed(2)}</p>
-      <p>Month with Highest Offset: {summaryStats.highestOffsetMonth}</p>
+    <div style={styles.container}>
+      <h3 style={styles.heading}>Summary</h3>
+      <div style={styles.summaryItem}>
+        <span>Total Carbon Offsets:</span>
+        <span>{summaryStats.totalOffsets} tons</span>
+      </div>
+      <div style={styles.summaryItem}>
+        <span>Total Expenditure on Offsets:</span>
+        <span>${summaryStats.totalExpenditure}</span>
+      </div>
+      <div style={styles.summaryItem}>
+        <span>Average Monthly Offset:</span>
+        <span>{summaryStats.averageMonthlyOffset.toFixed(2)} tons</span>
+      </div>
+      <div style={styles.summaryItem}>
+        <span>Average Monthly Expenditure:</span>
+        <span>${summaryStats.averageMonthlyExpenditure.toFixed(2)}</span>
+      </div>
+      <div style={styles.summaryItem}>
+        <span>Month with Highest Offset:</span>
+        <span>{summaryStats.highestOffsetMonth}</span>
+      </div>
     </div>
   );
+}
+
+const styles = {
+  container: {
+    backgroundColor: '#f5f5f5',
+    padding: '20px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  },
+  heading: {
+    fontSize: '20px',
+    marginBottom: '15px',
+  },
+  summaryItem: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    marginBottom: '10px',
+  },
 }
 
 export default DataSummary;
